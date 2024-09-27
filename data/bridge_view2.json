@@ -1,0 +1,43 @@
+{
+    "image_path": "images/bridge2.png",
+    "width": 3020,
+    "height": 4030,
+    "points": [
+        {
+            "name": "sw_pillar_top",
+            "coords": [1120, 1615]
+        },
+        {
+            "name": "se_pillar_road",
+            "coords": [1209, 2045]
+        },
+        {
+            "name": "se_pillar_top",
+            "coords": [1192, 1609]
+        },
+        {
+            "name": "nw_pillar_bottom",
+            "coords": [2246, 2232]
+        },
+        {
+            "name": "nw_pillar_top",
+            "coords": [2242, 1920]
+        },
+        {
+            "name": "ne_pillar_bottom",
+            "coords": [2288, 2222]
+        },
+        {
+            "name": "ne_pillar_road",
+            "coords": [2285, 2137]
+        },
+        {
+            "name": "ne_pillar_top",
+            "coords": [2282, 1920]
+        },
+        {
+            "name": "e_road_mid",
+            "coords": [1921, 2088]
+        }
+    ]
+}

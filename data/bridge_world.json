@@ -1,0 +1,61 @@
+{
+    "object_name": "Golden Gate Bridge",
+    "points": [
+        {
+            "name": "sw_pillar_bottom",
+            "world_pos": [0, 0, 0]
+        },
+        {
+            "name": "sw_pillar_road",
+            "world_pos": [0, 75, 0]
+        },
+        {
+            "name": "sw_pillar_top",
+            "world_pos": [0, 227, 0]
+        },
+        {
+            "name": "se_pillar_bottom",
+            "world_pos": [0, 0, 27]
+        },
+        {
+            "name": "se_pillar_road",
+            "world_pos": [0, 75, 27]
+        },
+        {
+            "name": "se_pillar_top",
+            "world_pos": [0, 227, 27]
+        },
+        {
+            "name": "nw_pillar_bottom",
+            "world_pos": [1280, 0, 0]
+        },
+        {
+            "name": "nw_pillar_road",
+            "world_pos": [1280, 75, 0]
+        },
+        {
+            "name": "nw_pillar_top",
+            "world_pos": [1280, 227, 0]
+        },
+        {
+            "name": "ne_pillar_bottom",
+            "world_pos": [1280, 0, 27]
+        },
+        {
+            "name": "ne_pillar_road",
+            "world_pos": [1280, 75, 27]
+        },
+        {
+            "name": "ne_pillar_top",
+            "world_pos": [1280, 227, 27]
+        },
+        {
+            "name": "w_road_mid",
+            "world_pos": [640, 75, 0]
+        },
+        {
+            "name": "e_road_mid",
+            "world_pos": [640, 75, 27]
+        }
+    ]
+}
