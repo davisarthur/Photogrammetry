@@ -2,10 +2,9 @@ import numpy as np
 from typing import List
 from scipy.ndimage import gaussian_filter, sobel, uniform_filter
 
-def keypoint_finder(
+def corner_finder(
     intensity: np.ndarray,
     smoothing_variance: int,
-    threshold: float
 ) -> np.ndarray:
     '''
     Implementation of Harris & Stephens / Shi–Tomasi corner detection algorithm
@@ -32,14 +31,12 @@ def keypoint_finder(
     Jy2_weighted_avg = uniform_filter(Jy2)
 
     height, width = intensity.shape
-    pixels = []
+    corner_scores = np.zeros(intensity.shape)
     for i in range(height):
         for j in range(width):
             M = np.array([
                 [Jx2_weighted_avg[i,j], Jxy_weighted_avg[i,j]],
                 [Jxy_weighted_avg[i,j], Jy2_weighted_avg[i,j]],
             ])
-            score = np.trace(M) - np.sqrt(np.trace(M)**2.0 - 4 * np.linalg.det(M))
-            if score > threshold:
-                pixels.append([j,i])
-    return np.array(pixels, dtype=int)
+            corner_scores[i,j] = np.trace(M) - np.sqrt(np.trace(M)**2.0 - 4 * np.linalg.det(M))
+    return corner_scores
