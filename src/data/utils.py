@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from typing import Tuple
 
-def read_dlt_points(world_file_name: str, view_file_name: str) -> Tuple[np.ndarray, np.ndarray, int, int]:
+def read_points(world_file_name: str, view_file_name: str) -> Tuple[np.ndarray, np.ndarray, int, int]:
     '''
     Reads world coordinates and pixel coordinates for a view of an object. Joins the two lists on point ID.
     Also extracts width and height of the image.

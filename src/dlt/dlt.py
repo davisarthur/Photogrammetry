@@ -1,6 +1,6 @@
 import numpy as np
-import data_reader
-import viewing_transforms
+from ..data import utils
+from . import viewing_transforms
 from typing import Tuple
 from scipy.spatial.transform import Rotation
 
@@ -23,7 +23,7 @@ def dlt(world_file_name: str, view_file_name: str) -> Tuple[np.ndarray, np.ndarr
         R - rotation transform of camera
     '''
     # Read data, normalize pixel coords
-    positions, pixels, width, height = data_reader.read_dlt_points(world_file_name, view_file_name)
+    positions, pixels, width, height = utils.read_points(world_file_name, view_file_name)
     vp_pixels = viewing_transforms.inverse_viewport_transform(pixels, width, height)
 
     # Estimate projection matrix, L
