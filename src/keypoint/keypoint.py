@@ -5,6 +5,7 @@ from scipy.ndimage import gaussian_filter, sobel, uniform_filter
 def corner_finder(
     intensity: np.ndarray,
     smoothing_variance: int,
+    k: float = 0.04,
 ) -> np.ndarray:
     '''
     Implementation of Harris & Stephens / Shi–Tomasi corner detection algorithm
@@ -38,5 +39,5 @@ def corner_finder(
                 [Jx2_weighted_avg[i,j], Jxy_weighted_avg[i,j]],
                 [Jxy_weighted_avg[i,j], Jy2_weighted_avg[i,j]],
             ])
-            corner_scores[i,j] = np.trace(M) - np.sqrt(np.trace(M)**2.0 - 4 * np.linalg.det(M))
+            corner_scores[i,j] = np.linalg.det(M) - k * (np.trace(M)**2)
     return corner_scores
